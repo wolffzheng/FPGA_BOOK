@@ -5,10 +5,10 @@ set password [lindex $argv 1]
 send_user "$username:$password"
 
 spawn ./manual_update.sh 
-expect "*https://github.com*"
+expect "Username for *:"
 send "$username\r"
 
-expect "*wolffzheng@github.com*"
+expect "Password for *:"
 send "$password\r"
 #expect eof
 interact
